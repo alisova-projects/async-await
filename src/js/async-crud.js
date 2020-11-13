@@ -45,8 +45,13 @@ async function removeBook(bookId) {
   };
 
   const response = await fetch(url, options);
-  const book = await response.json();
-  return book;
+
+  // вернёт удалённый объект:
+  // const book = await response.json();
+  // return book;
+
+  // или:
+  return response;
 }
 
 async function updateBookById(update, bookId) {
